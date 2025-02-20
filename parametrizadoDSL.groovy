@@ -9,7 +9,10 @@ job('job-dsl-ejemplo2') {
   parameters {
   	stringParam('nombre', defaultValue = 'Julian', description = 'Parametro de cadena para le job')
     choiceParam('planeta', ['Mercurio', 'Venus', 'Tierra', 'Marte', 'Jupiter', 'Saturno', 'Urano', 'Neptuno'])
-    booleanParam('agente', false)            
+    booleanParam('agente', false)
+  }
+  triggers {
+    githubPush()
   }
   steps {
     shell("bash jobscript.sh") 
