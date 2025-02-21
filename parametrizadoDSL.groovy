@@ -20,7 +20,7 @@ job('job-dsl-ejemplo2') {
   publishers {
     mailer('hugo.torres@grupocarsa.com', true, true)
     slackNotifier {
-      notifyAborted(true)
+      notifyAborted(false)
       notifyEveryFailure(true)
       notifyNotBuilt(false)
       notifyUnstable(false)
