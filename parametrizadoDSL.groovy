@@ -27,7 +27,7 @@ job('job-dsl-ejemplo2') {
       notifyBackToNormal(true)
       notifySuccess(true)
       notifyRepeatedFailure(false)
-      startNotification(false)
+      startNotification(true)
       includeTestSummary(false)
       includeCustomMessage(false)
       customMessage(null)
